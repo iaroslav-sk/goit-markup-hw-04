@@ -283,6 +283,7 @@ body {
 /* ===================example-titule=============== */
 .example-titule {
   padding-top: 94px;
+  padding-bottom: 94px;
 }
 .example-titule .list {
   display: flex;
@@ -294,7 +295,7 @@ body {
 }
 /* ===================team======================== */
 .team-titule {
-  padding-top: 188px;
+  padding-top: 94px;
   padding-bottom: 94px;
   background-color: var(--button-bg-color);
 }
@@ -318,6 +319,8 @@ body {
   text-align: center;
 }
 .team-list-card {
+  width: 270px;
+  /* height: 428px; */
   background-color: var(--primary-bg-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -501,6 +504,7 @@ body {
   border: 0px;
   border-radius: 4px;
   font-family: Roboto, sans-serif;
+  font-weight: 500;
   color: var(--titule-text-color);
   background-color: var(--button-bg-color);
 }
