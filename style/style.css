@@ -15,6 +15,8 @@
   --button-bg-color: #f5f4fa;
   --mail-footer-color-text: rgba(255, 255, 255, 0.6);
   --background-dark-color: #2f303a;
+  --icon-bg-color: #afb1b8;
+  --icon-bg-footer-color: rgba(255, 255, 255, 0.1);
 }
 *,
 *::before,
@@ -120,7 +122,16 @@ body {
 .address-header .contact:not(:last-child) {
   margin-right: 50px;
 }
+.address-header .icon-mail,
+.icon-phone {
+  fill: var(--primary-text-color);
+  margin-right: 10px;
+}
 
+.contact:hover .icon-mail,
+.contact:hover .icon-phone {
+  fill: var(--accent-color);
+}
 .address-header .contact {
   color: var(--primary-text-color);
   /* text */
@@ -139,14 +150,18 @@ body {
 
 /* ================hero=========================== */
 .hero {
-  background-color: var(--background-dark-color);
+  background-image: linear-gradient(
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url("../images/background/hero-background.jpg");
+  background-size: 1600px 600px;
+  background-repeat: no-repeat;
+  background-position: center;
   padding-top: 200px;
   padding-bottom: 200px;
 }
-.hero .container {
-  /* padding-right: 252px;
-  padding-left: 252px; */
-}
+
 .hero-titule {
   display: block;
   margin: 0 auto;
@@ -201,7 +216,51 @@ body {
 .features-list .item:not(:last-child) {
   margin-right: 30px;
 }
-
+/* background-li */
+.icon-background-antena::before {
+  content: "";
+  display: block;
+  height: 120px;
+  background-color: var(--button-bg-color);
+  margin-bottom: 30px;
+  background-image: url("../images/icon/antenna.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 70px 70px;
+}
+.icon-background-clock::before {
+  content: "";
+  display: block;
+  height: 120px;
+  background-color: var(--button-bg-color);
+  margin-bottom: 30px;
+  background-image: url("../images/icon/clock.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 70px 70px;
+}
+.icon-background-diagram::before {
+  content: "";
+  display: block;
+  height: 120px;
+  background-color: var(--button-bg-color);
+  margin-bottom: 30px;
+  background-image: url("../images/icon/diagram.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 70px 70px;
+}
+.icon-background-astronaut::before {
+  content: "";
+  display: block;
+  height: 120px;
+  background-color: var(--button-bg-color);
+  margin-bottom: 30px;
+  background-image: url("../images/icon/astronaut.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 70px 70px;
+}
 .features-list .titule {
   margin-bottom: 10px;
   /* color */
@@ -236,6 +295,8 @@ body {
 /* ===================team======================== */
 .team-titule {
   padding-top: 188px;
+  padding-bottom: 94px;
+  background-color: var(--button-bg-color);
 }
 .team-titule .list {
   display: flex;
@@ -246,7 +307,7 @@ body {
   padding-top: 30px;
   padding-left: 58px;
   padding-right: 58px;
-  padding-bottom: 30px;
+  padding-bottom: 16px;
 }
 .team-titule .section-titule {
   padding-bottom: 50px;
@@ -255,6 +316,12 @@ body {
   font-size: 36px;
   line-height: 1.16;
   text-align: center;
+}
+.team-list-card {
+  background-color: var(--primary-bg-color);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
 }
 .team-titule .titule {
   margin-bottom: 10px;
@@ -271,7 +338,66 @@ body {
   line-height: 1.18;
   text-align: center;
 }
+.social-list {
+  padding-left: 32px;
+  padding-right: 32px;
+  padding-bottom: 30px;
+}
+.social-list-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.social-list-link:hover {
+  background-color: var(--accent-color);
+}
+.social-list-link:hover .social-list-icon {
+  fill: var(--primary-bg-color);
+}
+.social-list-icon {
+  fill: var(--icon-bg-color);
+  width: 20px;
+  height: 20px;
+}
+/* =================client-list =====================*/
+.client-titule {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+.client-titule .section-titule {
+  padding-bottom: 50px;
+}
+.client-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
+.client-list-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 170px;
+  height: 90px;
+  border: 1px solid var(--icon-bg-color);
+  border-radius: 4px;
+}
+.client-list-item:not(:last-child) {
+  margin-right: 30px;
+}
+.client-list-link:hover {
+  border-color: var(--accent-color);
+}
+.client-list-link:hover .client-list-icon {
+  fill: var(--accent-color);
+}
+.client-list-icon {
+  fill: var(--icon-bg-color);
+}
 /* ===================footer======================== */
 .footer {
   padding-top: 60px;
@@ -305,6 +431,50 @@ body {
 .mail-footer:active,
 .mail-footer:focus {
   color: var(--accent-color);
+}
+.footer .container {
+  display: flex;
+}
+.footer-social-list {
+  display: flex;
+  padding-top: 20px;
+  margin-left: 70px;
+}
+
+.footer-social-list-titule {
+  display: flex;
+  justify-content: start;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-align: center;
+  color: var(--white-text-color);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-left: 70px;
+}
+.footer-social-list-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.footer-social-list-link {
+  background-color: var(--icon-bg-footer-color);
+}
+.footer-social-list-link:hover {
+  background-color: var(--accent-color);
+}
+.footer-social-list-link:hover .social-list-icon {
+  fill: var(--primary-bg-color);
+}
+.footer-social-list-icon {
+  fill: var(--white-text-color);
+  width: 20px;
+  height: 20px;
 }
 /* ---------------------------------------- */
 /* -------------portfolio ------------------*/
@@ -362,6 +532,10 @@ body {
 }
 .works-list-items:nth-child(3n) {
   margin-right: 0px;
+}
+.works-list-items:hover {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 .works-list .titule {
   padding-top: 20px;
